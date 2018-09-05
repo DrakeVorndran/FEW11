@@ -1,0 +1,87 @@
+<!doctype HTML>
+
+<!--
+
+ Challenge 4: You have been tasked to create a
+ for that sets a users profile. It will allow
+ them to do the following:
+
+ - Enter their User name (input text, should not autocomplete)
+ - Email (input email)
+ - Number of pets (input number)
+ - Birthday (input date)
+ - Choose an prefix (select)
+ - Set a role (input type radio)
+ - Show public profile (checkbox, should be checked by default)
+ - Enter a bio (textarea)
+ - Upload a picture (input file, should only accept images)
+ - Self Destruct (input checkbox, should be DISABLED by default since we haven't implemented this feature yet)
+
+ Your job is to:
+ - Organize this better by adding tags
+ - Add sensible placeholders
+ - Connect labels to elements
+ - Associate labels with their form element
+
+ The form must to send file data. Set the attributes on the form tag:
+ - It must send a file wat are the required attributes for this?
+
+ Stretch Challenge: Use the pattern attribute to check the values in
+ fields meet requirements. (you will need to have experience with
+ regular expressions)
+ - Name should not be empty.
+ - Name should be at least 6 characters
+ - Name should only contain letters and numbers
+
+ -->
+
+<form action="/" method"post">
+    <p><label>Name</label>
+        <input name="name" autocomplete="off" pattern="A-Za-z0-9.{6,}"></p>
+
+    <p><label>Email</label>
+        <input name="email" type="email"></p>
+
+    <p><label>Pet Count</label>
+        <input name="pets" type="number"></p>
+
+    <p><label>Birthday</label>
+        <input name="birthday"type="date"></p>
+
+    <p>
+        <p><select name="prefix">
+    <option>Mr</option>
+    <option>Mrs</option>
+    <option>Ms</option>
+    <option>Sir</option>
+    <option>Madam</option>
+    <option>Dr</option>
+    <option>None</option>
+</select></p>
+
+        <p>
+            <input id="radio-Admin" type="radio" name="role" value="Admin"/>
+            <label for="radio-Admin">Admin</label>
+            <input id="radio-edit" type="radio" name="role" value="Editor" />
+            <label for="radio-edit">Editor</label>
+            <input id="radio-cont1" type="radio" name="role" value="Contributor" />
+            <label for="radio-cont1">Contributor</label>
+            <input id="radio-cont2" type="radio" name="role" value="Contributor" />
+            <label for="radio-cont2">Contributor</label>
+        </p>
+
+        <p><input type="checkbox" name="public" checked>
+            <label>Public Bio</label></p>
+
+        <textarea name="bio"></textarea>
+
+        <p><label>Upload Image</label>
+            <input name="image" type="file" accept=".png,.jpg,.gif">
+            <p />
+
+            <p><label>Self Destruct</label>
+                <input name="self-destruct" type="checkbox" disabled>
+                <p />
+
+                <button type="submit">Submit</button>
+</form>
