@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+      <link rel="stylesheet" href="chal1.css">
+  </head>
+  <body>
+    <!-- html elements -->
+    
+    <p>
+      <label for="amount">Bill</label>
+      <input id="amount" type="number" value="30.00">
+    </p>
+    
+    <p>
+      <label for="percent">Tip %</label>
+        <div class="inP">
+        <button class="minus" id="minPer">-</button>
+      <input id="percent" type="number" value="15">
+        <button class="plus" id="plusPer">+</button>
+        </div>
+      </p>
+      
+    <p>
+      <label for="people">number of people</label>
+        <div class="inP">
+        <button class="minus" id="minPeo">-</button>
+      <input id="people" type="number" value="2" step="1">
+        <button class="plus" id="plusPeo">+</button>
+        </div>
+    </p>
+    
+    
+    <p class="vals">
+      <span>Tip:</span>
+      <span id="tip">0.00</span>
+    </p>
+    
+    <p class="vals">
+      <span>Total:</span>
+      <span id="total">0.00</span>
+    </p>
+      
+      <label class="perPerson">Per Person</label>
+      
+    <p class="vals">
+      <span>Tip:</span>
+      <span id="eachTip">0.00</span>
+    </p>
+      
+      <p class="vals">
+      <span>Total:</span>
+      <span id="eachTotal">0.00</span>
+    </p>
+    
+    <!-- Scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

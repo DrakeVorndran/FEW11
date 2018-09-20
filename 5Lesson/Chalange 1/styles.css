@@ -1,0 +1,46 @@
+.calc{
+    width:150px;
+    border: 2px black solid;
+/*    border-radius: 20px;*/
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    
+    
+}
+
+input{
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+    
+}
+
+#tiplabel, #billlabel{
+    font-size: 10px;
+}
+
+#tip ,#total{
+/*    text-align: ;*/
+    font-weight: bold;
+}
+
+
+
+#calculate{
+    padding: 7px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin:10px 0px 10px 0px;
+    
+}
