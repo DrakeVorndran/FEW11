@@ -1,0 +1,42 @@
+<script src="data.js"></script>
+<script>
+  // -----------------------------------------
+  // Define a Class with a function
+  let userL = []
+  for(let i = 0; i < data.length; i += 1){
+      userL.push(new User(data[i].first_name,data[i].last_name,data[i].prefix,data[i].email,data[i].age))
+  }
+  // Challenge 1) Extend the example below to include
+  // properties of:
+  // - prefix
+  // - email
+  // - age
+  // Create parameters for each of these and store
+  // the values with in properties.
+
+  function User(first, last, prefix, email, age) {
+    this.first = first;
+    this.last = last;
+    this.prefix = prefix;
+    this.email = email;
+    this.age = age;
+  }
+
+  // Challenge 2) Extend the method below to also
+  // include the prefix before the first name.
+
+  User.prototype.describe = function() {
+    return `${this.first} ${this.last}`;
+  }
+
+  // ----------------------------------------
+
+  // Add prefix, email, and age arguments when
+  // you initialize the Users below.
+
+  const joeSmith = new User('Joe', 'Smith');
+  const janeDoe = new User('Jane', 'Doe');
+  for(let i = 0; i < userL.length; i += 1){
+      console.log(userL[i].describe());
+    }
+</script>

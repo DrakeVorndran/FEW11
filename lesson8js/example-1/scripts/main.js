@@ -5,11 +5,12 @@ let str = '';
 
 for (var i = 0; i < data.length; i += 1) {
   const alien = data[i];
+  const { name, power, rof, health} = alien;
   // console.log(alien);
-  str += `<div class="alien"><h2>${alien.name}</h2>
-  <p><span class='label'>Power</span> <br> <span class='info'>${alien.power}</span></p>
-  <p><span class='label'>Rate Of fire </span><br><span class='info'>${alien.rof}</span></p>
-  <p><span class='label'>Health </span><br><span class='info'>${alien.health}</span></p>
+  str += `<div class="alien"><h2>${name}</h2>
+  <p><span class='label'>Power</span> <br> <span class='info'>${power}</span></p>
+  <p><span class='label'>Rate Of fire </span><br><span class='info'>${rof}</span></p>
+  <p><span class='label'>Health </span><br><span class='info'>${health}</span></p>
   <img src='${alien.image}'>
   </div>`;
 }
