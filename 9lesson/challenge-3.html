@@ -11,17 +11,13 @@
   // Challenge 5) Look at the user data in data.js.
   // Add properties here for each property found
   // the objects in data.
-  let userL = []
-  for(let i = 0; i < data.length; i += 1){
-      userL.push(new User[data[i]])
-  }
   // Stretch goal: Automate the process of adding
   // properties with a loop...
 
   class User {
     constructor(data) {
         this.id = data.id;
-        this.prefix = user.prefix;
+        this.prefix = data.prefix;
       this.first = data.first_name;
       this.last = data.last_name;
       this.email = data.email;
@@ -31,16 +27,22 @@
       this.image = data.image;
     }
 
+
     describe() {
       return `${this.first} ${this.last}`;
     }
 
     toHTMLString(){
-        string = `<div><h2>${this.prefix}.${this.first} ${this.last}</h2>
+        let string = `<div><h2>${this.prefix}.${this.first} ${this.last}</h2>
                   <p><label>Rating: </label><span>${this.rating}</span></p>
-                  <p><label>High Score: </label><span>${this.high_score}</span></p></div>;`
+                  <p><label>High Score: </label><span>${this.high_score}</span></p></div>`;
         return string;
     }
+  }
+
+  let userL = [];
+  for(let i = 0; i < data.length; i += 1){
+      userL.push(new User(data[i]))
   }
 
   // Challenge 7) Add a method to the class above
@@ -65,5 +67,16 @@
   // Loop through all of the User Objects and
   // display them in the browser by calling their
   // toHTMLString() method.
+  for (var i in userL){
+      document.getElementById('main').innerHTML+=userL[i].toHTMLString();
+  }
 
 </script>
+<style>
+label{
+    font-weight: bold;
+}
+span{
+
+}
+</style>
