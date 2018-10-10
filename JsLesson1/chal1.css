@@ -1,12 +1,18 @@
 body{
-    width:200px;
-    border:black solid 2px;
+    
+}
+
+#container{
     padding: 20px;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items:center; 
+    width:200px;
+    border:black solid 2px;
+    
 }
 
 label{

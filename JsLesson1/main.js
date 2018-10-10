@@ -12,16 +12,29 @@ const minPer = document.getElementById("minPer");
 const plusPer = document.getElementById("plusPer");
 const minPeo = document.getElementById("minPeo");
 const plusPeo = document.getElementById("plusPeo");
-let cost = 0;
-let tipVal = 0;
+
 
 function update(){
+    let cost = 0;
+    let tipVal = 0;
     tipVal = bill.value*tipPer.value/100
     tip.innerHTML = tipVal;
     cost = Number(tip.innerHTML)+Number(bill.value);
     total.innerHTML = "$"+cost;
     eachTotal.innerHTML = cost/Number(people.value);
     eachTip.innerHTML = tipVal/Number(people.value);
+}
+
+bill.oninput = (e) => {
+    update()
+}
+
+tipPer.oninput = (e) => {
+    update()
+}
+
+people.oninput = (e) => {
+    update()
 }
 
 
